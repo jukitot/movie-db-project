@@ -1,0 +1,9 @@
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.user img {
+    height: 20px;
+}
