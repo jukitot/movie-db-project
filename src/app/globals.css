@@ -1,4 +1,9 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
 .divBlock{
     display: flex;
     gap: 100px;
+}
+.backgroundDark {
+    background-color: #131212;
 }

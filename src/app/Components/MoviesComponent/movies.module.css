@@ -1,16 +1,26 @@
 .movies{
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 .card{
-    width: 30vw;
+    background-color: rgba(192, 188, 188, 0.47);
+    width: 18vw;
+    height: 60vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    text-decoration: none;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 10px;
 }
+
 .card img {
     width: 300px;
+    border-radius: 10px;
 }

@@ -7,7 +7,7 @@ const HeaderComponent = () => {
     return (
         <div className={styles.header}>
             <ul>
-                <Link href={'/'}>
+                <Link className={styles.logo} href={'/'}>
                     <li> MOVIE DB</li>
                 </Link>
                 <SearchComponent/>

@@ -3,6 +3,8 @@ import Link from "next/link";
 import styles from "./movies.module.css";
 import PaginationComponent from "@/app/Components/pagination/PaginationComponent";
 import {IMovie} from "@/app/models/IMovie";
+import MovieCardComponent from "@/app/Components/MovieCardComponent/MovieCardComponent";
+import {IGenre} from "@/app/models/IGenre";
 
 type MoviesProps = {
     movies: IMovie[];
@@ -10,7 +12,7 @@ type MoviesProps = {
     totalPages: number;
 }
 
-const MoviesComponent:FC<MoviesProps> = ({ movies, currentPage, totalPages }) => {
+const MoviesComponent:FC<MoviesProps> = ({ movies, currentPage, totalPages}) => {
 
     return (
         <div>
@@ -18,18 +20,10 @@ const MoviesComponent:FC<MoviesProps> = ({ movies, currentPage, totalPages }) =>
 
 
             {movies.map((movie) => (
-                <Link key={movie.id} href={
-                    {
-                        pathname: `/${movie.id}`
-                    }
-                }>
-                    <div className={styles.card}>
-                        <h2>{movie.title}</h2>
-                        <img
-                            src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-                            alt={movie.title}
-                        />
-                    </div>
+                <Link key={movie.id} href={`/${movie.id}`} className={styles.card}>
+
+
+                    <MovieCardComponent movie={movie} />
                 </Link>
             ))}
             </div>
