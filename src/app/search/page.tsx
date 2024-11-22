@@ -6,15 +6,18 @@ const SearchPage = async(props: {searchParams: SearchParams}) => {
 
     const searchParams =  await props.searchParams;
     console.log(searchParams);
-    const movieNameQuery = searchParams.query
+
+
+    const movieNameQuery = searchParams.query || ''
     console.log(movieNameQuery);
+
     const currentPage = parseInt(searchParams.page || "1", 10)
     const {results, total_pages} = await movieService.getSearchResult(movieNameQuery, currentPage)
 
 
     return (
         <div>
-            <MoviesComponent movies={results} currentPage={currentPage} totalPages={total_pages}/>
+            <MoviesComponent movies={results} currentPage={currentPage} totalPages={total_pages} query={movieNameQuery}/>
         </div>
     );
 };

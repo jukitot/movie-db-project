@@ -6,9 +6,6 @@
     gap: 100px;
 }
 
-
-
-
 body {
     margin: 0;
     padding: 0;
@@ -20,10 +17,11 @@ body.light-theme {
     color: #000000;
 }
 
-body .light-theme .
+
 body.light-theme div{
     color: #000000;
 }
+
 
 
 body.dark-theme {

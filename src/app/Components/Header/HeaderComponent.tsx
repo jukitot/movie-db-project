@@ -5,6 +5,7 @@ import UserComponent from "@/app/Components/UserComponent/UserComponent";
 import styles from './header.module.css'
 import ThemeSwitcherComponent from "@/app/Components/ThemeSwitcherComponent/ThemeSwitcherComponent";
 const HeaderComponent = () => {
+
     return (
         <div className={styles.header}>
             <ul>
@@ -12,8 +13,9 @@ const HeaderComponent = () => {
                     <li> MOVIE DB</li>
                 </Link>
                 <SearchComponent/>
-                <UserComponent/>
+
                 <ThemeSwitcherComponent/>
+                <UserComponent/>
             </ul>
         </div>
     );

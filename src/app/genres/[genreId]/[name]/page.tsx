@@ -14,15 +14,14 @@ const GenrePage = async({params, searchParams}:{params:Params; searchParams: { p
     const currentPage = parseInt(searchParams.page || "1", 10)
 
     const {results, total_pages} = await movieService.getMovieByGenre(genreId, currentPage)
-    console.log(results);
-    console.log(total_pages);
+
 
 
     return (
         <div>
 
             <div><h1>Movies in Genre {params.name}</h1>
-                <MoviesComponent movies={results} currentPage={currentPage} totalPages={total_pages}/>
+                <MoviesComponent movies={results} currentPage={currentPage} totalPages={total_pages} />
             </div>
 
 

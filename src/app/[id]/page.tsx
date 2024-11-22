@@ -3,7 +3,8 @@ import MovieCardComponent from "@/app/Components/MovieCardComponent/MovieCardCom
 
 import {movieService} from "@/app/services/api.service";
 import MovieInfoComponent from "@/app/Components/MovieInfoComponent/MovieInfoComponent";
-
+import GenreBadgesComponent from "@/app/Components/GenreBadgesComponent/GenreBadgesComponent";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 type MoviePageParams = {
     id: string
@@ -13,8 +14,10 @@ const movie = await movieService.getMovieById(Number(params.id))
 
     return (
         <div>
-            <MovieCardComponent movie={movie}/>
+            <MovieCardComponent movie={movie} />
             <MovieInfoComponent movie={movie}/>
+
+
             </div>
     );
 };

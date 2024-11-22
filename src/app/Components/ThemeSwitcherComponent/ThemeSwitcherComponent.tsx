@@ -1,5 +1,6 @@
 "use client"
 import React, {FC, useEffect} from "react";
+import styles from './toogle.module.css'
 
 const ThemeSwitcherComponent:FC = () => {
     const toggleTheme = () => {
@@ -22,7 +23,7 @@ const ThemeSwitcherComponent:FC = () => {
         document.body.classList.add(`${savedTheme}-theme`);
     }, []);
 
-    return <button onClick={toggleTheme}>Switch Theme</button>;
+    return <button onClick={toggleTheme} className={styles.toggle}>Switch Theme</button>;
 };
 
 export default ThemeSwitcherComponent;

@@ -6,13 +6,16 @@ import {IMovie} from "@/app/models/IMovie";
 import MovieCardComponent from "@/app/Components/MovieCardComponent/MovieCardComponent";
 
 
+
 type MoviesProps = {
     movies: IMovie[];
     currentPage: number;
     totalPages: number;
+    query?: string;
+
 }
 
-const MoviesComponent:FC<MoviesProps> = ({ movies, currentPage, totalPages}) => {
+const MoviesComponent:FC<MoviesProps> = async ({ movies, currentPage, totalPages, query}) => {
 
     return (
         <div>
@@ -21,14 +24,13 @@ const MoviesComponent:FC<MoviesProps> = ({ movies, currentPage, totalPages}) => 
 
             {movies.map((movie) => (
                 <Link key={movie.id} href={`/${movie.id}`} className={styles.card}>
+                    <MovieCardComponent movie={movie}/>
 
-
-                    <MovieCardComponent movie={movie} />
                 </Link>
             ))}
             </div>
             <div>
-               <PaginationComponent currentPage={currentPage} totalPages={totalPages}/>
+               <PaginationComponent currentPage={currentPage} totalPages={totalPages} query={query}/>
             </div>
 
         </div>
