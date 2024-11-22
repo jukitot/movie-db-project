@@ -1,8 +1,6 @@
 import React from 'react';
 import {movieService} from "@/app/services/api.service";
-import MovieCardComponent from "@/app/Components/MovieCardComponent/MovieCardComponent";
-import Link from "next/link";
-import PaginationComponent from "@/app/Components/pagination/PaginationComponent";
+
 import MoviesComponent from "@/app/Components/MoviesComponent/MoviesComponent";
 type Params = {
     genreId: string,

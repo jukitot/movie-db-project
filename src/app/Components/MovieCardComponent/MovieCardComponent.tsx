@@ -2,9 +2,7 @@ import React, {FC} from 'react';
 import {IMovie} from "@/app/models/IMovie";
 import MoviePosterComponent from "@/app/Components/MoviePosterComponent/MoviePosterComponent";
 import MovieStarRating from "@/app/Components/MovieStarRating/MovieStarRating";
-import styles from './movieCars.module.css'
-import {IGenre} from "@/app/models/IGenre";
-import GenreBadgesComponent from "@/app/Components/GenreBadgesComponent/GenreBadgesComponent";
+import styles from './movieCard.module.css'
 
 
 type MovieCardProps = {

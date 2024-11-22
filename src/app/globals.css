@@ -1,9 +1,33 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+
 .divBlock{
     display: flex;
     gap: 100px;
 }
-.backgroundDark {
-    background-color: #131212;
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body .light-theme .
+body.light-theme div{
+    color: #000000;
+}
+
+
+body.dark-theme {
+    background-color: #000000;
+    color: #ffffff;
+
 }

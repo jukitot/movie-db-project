@@ -1,0 +1,14 @@
+.form {
+    display: flex;
+    gap: 20px;
+}
+.input {
+    background-color: #5a595a;
+    border: none;
+    border-radius: 10px;
+}
+
+.button {
+    border: none;
+    border-radius: 10px;
+}

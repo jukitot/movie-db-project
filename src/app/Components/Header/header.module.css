@@ -1,14 +1,19 @@
 .header {
     color: white;
     height: 10vh;
+    width: 100vw;
     background-color: #2e2d2d;
+    display: flex;
+    justify-content:space-evenly;
+
+
 }
 
 .header ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 50px;
+    gap: 100px;
     list-style: none;
     text-decoration: none;
 }

@@ -15,7 +15,8 @@ const urlBuilder = {
     movieBaseUrl: '/movie',
     allMovies: () => `${base}/discover/movie`,
     oneMovie: (id: number) => `${base}/movie/${id}`,
-    genres: () => `${base}/genre/movie/list`
+    genres: () => `${base}/genre/movie/list`,
+    searchMovie: () => `${base}/search/movie`
 }
 
 const movieService = {
@@ -39,6 +40,11 @@ const movieService = {
     getMovieByGenre: async (genreId: number, page: number = 1): Promise<IResponse> => {
         const response = await fetch(`${urlBuilder.allMovies()}?with_genres=${genreId}&page=${page}`, {headers});
         const movies:IResponse = await response.json();
+        return movies;
+    },
+    getSearchResult: async (query: string, page: number = 1) :Promise<IResponse> => {
+        const response = await fetch(`${urlBuilder.searchMovie()}?query=${query}&page=${page}`, {headers});
+        const movies: IResponse = await response.json();
         return movies;
     }
 }
