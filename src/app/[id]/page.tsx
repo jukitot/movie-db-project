@@ -3,7 +3,7 @@ import MovieCardComponent from "@/app/Components/MovieCardComponent/MovieCardCom
 
 import {movieService} from "@/app/services/api.service";
 import MovieInfoComponent from "@/app/Components/MovieInfoComponent/MovieInfoComponent";
-import GenreBadgesComponent from "@/app/Components/GenreBadgesComponent/GenreBadgesComponent";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 type MoviePageParams = {
@@ -12,12 +12,12 @@ type MoviePageParams = {
 const MoviePage = async  ({ params }: { params: MoviePageParams }) =>{
 const movie = await movieService.getMovieById(Number(params.id))
 
+
+
     return (
         <div>
-            <MovieCardComponent movie={movie} />
-            <MovieInfoComponent movie={movie}/>
-
-
+            <MovieCardComponent key={movie?.id} movie={movie}/>
+            <MovieInfoComponent key={movie?.id} movie={movie}/>
             </div>
     );
 };

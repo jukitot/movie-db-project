@@ -1,7 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-
-.divBlock{
+.divBlock {
     display: flex;
     gap: 100px;
 }
@@ -13,19 +12,15 @@ body {
 }
 
 body.light-theme {
-    background-color: #ffffff;
+    background-color: #dadada;
     color: #000000;
 }
 
-
-body.light-theme div{
+body.light-theme div {
     color: #000000;
 }
-
-
 
 body.dark-theme {
-    background-color: #000000;
+    background-color: #1b1b1b;
     color: #ffffff;
-
 }

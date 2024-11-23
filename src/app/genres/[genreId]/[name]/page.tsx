@@ -2,6 +2,8 @@ import React from 'react';
 import {movieService} from "@/app/services/api.service";
 
 import MoviesComponent from "@/app/Components/MoviesComponent/MoviesComponent";
+import styles from './page.module.css'
+
 type Params = {
     genreId: string,
     name: string,
@@ -15,12 +17,13 @@ const GenrePage = async({params, searchParams}:{params:Params; searchParams: { p
 
     const {results, total_pages} = await movieService.getMovieByGenre(genreId, currentPage)
 
+    const genreName = decodeURIComponent(params.name);
 
 
     return (
         <div>
 
-            <div><h1>Movies in Genre {params.name}</h1>
+            <div><h1 className={styles.title}>Movies in Genre {genreName}</h1>
                 <MoviesComponent movies={results} currentPage={currentPage} totalPages={total_pages} />
             </div>
 

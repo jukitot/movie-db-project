@@ -17,7 +17,7 @@ type MovieCardProps = {
 
 }
 
-const MovieCardComponent:FC<MovieCardProps> = async( {movie, }) => {
+const MovieCardComponent:FC<MovieCardProps> = async( {movie }) => {
 
 
     const allGenres = await movieService.getGenres()
@@ -25,27 +25,24 @@ const MovieCardComponent:FC<MovieCardProps> = async( {movie, }) => {
         ? allGenres.filter((genre) => movie.genre_ids.includes(genre.id))
         : [];
 
-    console.log("Movie object:", movie);
-    console.log("Genre IDs:", movie?.genre_ids);
+
 
     return (
         <div className={styles.cardFlex}>
-
-            <h3>{movie.title}</h3>
-            <MovieStarRating rating={movie.vote_average / 2} maxRating={5}/>
             <MoviePosterComponent movie={movie}/>
+
+            <MovieStarRating rating={movie.vote_average / 2} maxRating={5}/>
+            <h3>{movie.title}</h3>
             <div className={styles.genre}>
                 {movieGenres.map((genre) => (<GenreBadgesComponent genre={genre} key={genre.id}/>
-            ))}
+                ))}
             </div>
+            <p>Release date: {movie.release_date}</p>
 
 
-
-
-
-</div>
-)
-    ;
+        </div>
+    )
+        ;
 };
 
 export default MovieCardComponent;

@@ -4,6 +4,7 @@ import styles from "./movies.module.css";
 import PaginationComponent from "@/app/Components/pagination/PaginationComponent";
 import {IMovie} from "@/app/models/IMovie";
 import MovieCardComponent from "@/app/Components/MovieCardComponent/MovieCardComponent";
+import {movieService} from "@/app/services/api.service";
 
 
 
@@ -16,6 +17,7 @@ type MoviesProps = {
 }
 
 const MoviesComponent:FC<MoviesProps> = async ({ movies, currentPage, totalPages, query}) => {
+
 
     return (
         <div>

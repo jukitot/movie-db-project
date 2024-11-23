@@ -1,3 +1,20 @@
 .textColor {
     color: white
 }
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.list li{
+    list-style: none;
+}
+.list a {
+    text-decoration: none;
+    color: #35a56d;
+}
+
+.list a:hover{
+    color: lightgreen;
+}

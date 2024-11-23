@@ -5,14 +5,15 @@ type SearchParams = Promise<{[key: string]: string}>
 const SearchPage = async(props: {searchParams: SearchParams}) => {
 
     const searchParams =  await props.searchParams;
-    console.log(searchParams);
 
 
-    const movieNameQuery = searchParams.query || ''
-    console.log(movieNameQuery);
+    const movieNameQuery = (searchParams.query || '')
+
 
     const currentPage = parseInt(searchParams.page || "1", 10)
     const {results, total_pages} = await movieService.getSearchResult(movieNameQuery, currentPage)
+
+
 
 
     return (

@@ -6,3 +6,6 @@
     color: white;
 }
 
+.badge:hover {
+    background-color: rgba(204, 140, 140, 0.41);
+}
