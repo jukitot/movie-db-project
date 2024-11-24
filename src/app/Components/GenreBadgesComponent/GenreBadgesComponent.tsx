@@ -12,7 +12,7 @@ const GenreBadgesComponent: FC<GenreProps> = ({genre}) => {
         <div className={styles.genre}>
             <Link href={`/genres/${genre.id}/${genre.name}`}>
                 <p className={styles.badge}>
-                    <span className='badge' key={genre.id}>{genre.name}
+                    <span className='badge'>{genre.name}
                 </span>
                 </p>
             </Link>

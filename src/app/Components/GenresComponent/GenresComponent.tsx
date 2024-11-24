@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {movieService} from "@/app/services/api.service";
 import Link from "next/link";
 import styles from './genres.module.css'

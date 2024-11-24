@@ -8,7 +8,7 @@ const SearchComponent = () => {
                 <input className={styles.input} type="search" placeholder={'Enter name the movie'} name={'query'}/>
                 <button className={styles.button} type={'submit'}>Search</button>
             </form>
-            </div>
+        </div>
     );
 };
 

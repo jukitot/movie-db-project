@@ -5,9 +5,9 @@ import styles from './pagination.module.css'
 type PaginationProps = {
     currentPage: number;
     totalPages: number;
-    query?:string;
+    query?: string;
 }
-const PaginationComponent = ({ currentPage, totalPages, query}:  PaginationProps) => {
+const PaginationComponent = ({currentPage, totalPages, query}: PaginationProps) => {
     const prevPage = Math.max(currentPage - 1, 1);
     const nextPage = Math.min(currentPage + 1, totalPages);
 
@@ -29,7 +29,6 @@ const PaginationComponent = ({ currentPage, totalPages, query}:  PaginationProps
         return `?${params.toString()}`;
     };
 
-
     return (
         <div className={styles.buttons}>
             <Link href={buildUrl(prevPage)}>
@@ -43,7 +42,7 @@ const PaginationComponent = ({ currentPage, totalPages, query}:  PaginationProps
                             style={{
                                 fontWeight: currentPage === number ? "bold" : "normal",
                                 fontSize: currentPage === number ? '28px' : '20px',
-                                color: currentPage === number? 'rgba(218,14,33,0.69)' :'white',
+                                color: currentPage === number ? 'rgba(218,14,33,0.69)' : 'white',
                                 margin: "0 5px",
                             }}
                         >
@@ -52,7 +51,6 @@ const PaginationComponent = ({ currentPage, totalPages, query}:  PaginationProps
                     </Link>
                 ))}
             </div>
-
             <Link href={buildUrl(nextPage)}>
                 <button disabled={currentPage === totalPages}> {`-->`} </button>
             </Link>

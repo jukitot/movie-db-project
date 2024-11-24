@@ -2,7 +2,7 @@
 import React, {FC, useEffect} from "react";
 import styles from './toogle.module.css'
 
-const ThemeSwitcherComponent:FC = () => {
+const ThemeSwitcherComponent: FC = () => {
     const toggleTheme = () => {
 
         const isDarkTheme = document.body.classList.contains("dark-theme");

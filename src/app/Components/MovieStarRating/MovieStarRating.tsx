@@ -20,7 +20,6 @@ const MovieStarRating:FC<MovieStarRatingProps> = ({ rating, maxRating }) => {
       </span>
         );
     }
-
     return <div>{stars}</div>;
 };
 
