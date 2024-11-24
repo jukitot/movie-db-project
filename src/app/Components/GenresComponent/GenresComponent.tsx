@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {movieService} from "@/app/services/api.service";
 import Link from "next/link";
 import styles from './genres.module.css'
 
-const GenresComponent = async () => {
+
+const GenresComponent=  async () => {
     const genres = await movieService.getGenres()
 
     return (

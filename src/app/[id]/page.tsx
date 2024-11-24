@@ -9,16 +9,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 type MoviePageParams = {
     id: string
 }
-const MoviePage = async  ({ params }: { params: MoviePageParams }) =>{
-const movie = await movieService.getMovieById(Number(params.id))
-
-
+const MoviePage = async ({params}: { params: MoviePageParams }) => {
+    const movie = await movieService.getMovieById(Number(params.id))
 
     return (
         <div>
             <MovieCardComponent key={movie?.id} movie={movie}/>
             <MovieInfoComponent key={movie?.id} movie={movie}/>
-            </div>
+        </div>
     );
 };
 

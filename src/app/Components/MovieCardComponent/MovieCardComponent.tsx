@@ -13,8 +13,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 type MovieCardProps = {
     movie: IMovie;
-
-
 }
 
 const MovieCardComponent:FC<MovieCardProps> = async( {movie }) => {
