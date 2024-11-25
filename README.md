@@ -1,4 +1,10 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### Movie DB Project 18/11-25/11/2024
+
+## Features
+
+- **Search Functionality**: Users can search for movies by name, and the search results are displayed dynamically.
+- **Metadata Generation**: The metadata for each page is generated dynamically based on the movie information.
 
 ## Getting Started
 
