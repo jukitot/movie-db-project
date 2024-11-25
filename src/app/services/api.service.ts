@@ -22,14 +22,13 @@ const urlBuilder = {
 const movieService = {
     getAllMovies: async (page: number = 1): Promise<IResponse> => {
         const response = await fetch(`${urlBuilder.allMovies()}?page=${page}`, {headers})
-        const movies : IResponse = await response.json()
+        const movies: IResponse = await response.json()
         console.log(movies);
         return movies
     },
-    getMovieById: async (id: number): Promise<IMovie | null> => {
+    getMovieById: async (id: number): Promise<IMovie> => {
         const response = await fetch(urlBuilder.oneMovie(id), {headers})
-        const movie = await response.json();
-        return movie
+        return await response.json()
     },
     getGenres: async (): Promise<IGenre[]> => {
         const response = await fetch(urlBuilder.genres(), {headers})
@@ -39,13 +38,11 @@ const movieService = {
     },
     getMovieByGenre: async (genreId: number, page: number = 1): Promise<IResponse> => {
         const response = await fetch(`${urlBuilder.allMovies()}?with_genres=${genreId}&page=${page}`, {headers});
-        const movies:IResponse = await response.json();
-        return movies;
+        return await response.json();
     },
-    getSearchResult: async (query: string, page: number = 1) :Promise<IResponse> => {
+    getSearchResult: async (query: string, page: number = 1): Promise<IResponse> => {
         const response = await fetch(`${urlBuilder.searchMovie()}?query=${query}&page=${page}`, {headers});
-        const movies: IResponse = await response.json();
-        return movies;
+        return await response.json();
     }
 }
 

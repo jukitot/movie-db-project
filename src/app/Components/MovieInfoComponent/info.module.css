@@ -1,20 +1,106 @@
 .textColor {
-    color: white
-}
-.list {
+    width: 70vw;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-}
-.list li{
-    list-style: none;
-}
-.list a {
-    text-decoration: none;
-    color: #35a56d;
+    gap: 10vw;
+    margin-bottom: 50px;
 }
 
-.list a:hover{
+.list {
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.list li {
+    list-style: none;
+}
+
+.list a {
+    text-decoration: none;
+}
+
+.list a:hover {
     color: lightgreen;
+}
+
+.genre {
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: rgba(225, 61, 61, 0.52);
+    margin-bottom: 10px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genre:hover {
+    background-color: rgba(245, 114, 114, 0.52);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.boxInfo {
+    border: 2px solid #e13d3d;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgba(225, 61, 61, 0.52);
+}
+
+.text24 {
+    font-size: 24px;
+}
+
+.title {
+    color: rgba(219, 85, 85, 0.82);
+    font-size: 30px;
+}
+
+.release {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightcoral;
+}
+
+.logo {
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.companies {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.backdrop {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    border-radius: 10px;
+}
+
+.backdrop:hover{
+    transform: scale(1.5);
 }

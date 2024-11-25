@@ -4,8 +4,7 @@
     width: 100vw;
     background-color: #2e2d2d;
     display: flex;
-    justify-content:space-evenly;
-
+    justify-content: space-evenly;
 }
 
 .header ul {
@@ -16,9 +15,10 @@
     list-style: none;
     text-decoration: none;
 }
+
 .logo {
     color: red;
     font-size: 35px;
-    text-decoration: none ;
+    text-decoration: none;
 }
 

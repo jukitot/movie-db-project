@@ -1,19 +1,21 @@
-import React from 'react';
-import {Metadata} from "next"
-export const metadata: Metadata = {
-title: `About`
-}
+import React from "react";
+import {Metadata} from "next";
+import {movieService} from "@/app/services/api.service";
+
 type Props = {
-children: React.ReactNode
+    params: { id: string };
+};
+
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+    const movie = await movieService.getMovieById(parseInt(params.id, 10));
+    return {
+        title: movie.title,
+        description: movie.overview,
+    };
 }
 
-
-const Layout = ({children}:Props) => {
- return (
-  <>
-   {children}
-  </>
- );
+const Layout = ({children}: { children: React.ReactNode }) => {
+    return <>{children}</>;
 };
 
 export default Layout;

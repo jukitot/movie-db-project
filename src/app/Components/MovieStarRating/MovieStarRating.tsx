@@ -5,7 +5,7 @@ type MovieStarRatingProps = {
     maxRating: number;
 };
 
-const MovieStarRating:FC<MovieStarRatingProps> = ({ rating, maxRating }) => {
+const MovieStarRating: FC<MovieStarRatingProps> = ({rating, maxRating}) => {
     const stars = [];
     for (let i = 0; i < maxRating; i++) {
         stars.push(

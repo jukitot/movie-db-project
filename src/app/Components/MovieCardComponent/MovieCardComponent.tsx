@@ -28,8 +28,6 @@ const MovieCardComponent: FC<MovieCardProps> = async ({movie}) => {
                 {movieGenres.map((genre) => (<GenreBadgesComponent genre={genre} key={genre.id}/>
                 ))}
             </div>
-            <p>Release date: {movie.release_date}</p>
-
         </div>
     );
 };

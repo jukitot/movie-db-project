@@ -2,12 +2,12 @@ import React from 'react';
 import {Metadata} from "next"
 
 export const metadata: Metadata = {
-    title: 'Genre Page'
+    title: 'Search Result'
 }
 type Props = {
     children: React.ReactNode
 }
-const GenresLayout = ({children}: Props) => {
+const Layout = ({children}: Props) => {
     return (
         <>
             {children}
@@ -15,4 +15,4 @@ const GenresLayout = ({children}: Props) => {
     );
 };
 
-export default GenresLayout;
+export default Layout;

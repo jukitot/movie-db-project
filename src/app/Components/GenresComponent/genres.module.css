@@ -13,7 +13,6 @@
 .listColor li {
     color: white;
     text-decoration: none;
-
 }
 
 .aHref {
@@ -21,5 +20,5 @@
 }
 
 .listColor li:hover {
-   color: #db4649;
+    color: #db4649;
 }
