@@ -3,6 +3,7 @@ import MovieCardComponent from "@/app/Components/MovieCardComponent/MovieCardCom
 import {movieService} from "@/app/services/api.service";
 import MovieInfoComponent from "@/app/Components/MovieInfoComponent/MovieInfoComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
+import styles from './idPage.module.css'
 
 type MoviePageParams = {
     id: number
@@ -14,7 +15,7 @@ const MoviePage = async ({params}: { params: MoviePageParams }) => {
     const movie = await movieService.getMovieById(movieId)
 
     return (
-        <div>
+        <div className={styles.infoAll}>
             <MovieCardComponent key={movie?.id} movie={movie}/>
             <MovieInfoComponent key={movie?.id} movie={movie}/>
         </div>
